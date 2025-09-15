@@ -1,0 +1,33 @@
+Spring
+
+
+Properties:
+ ->Spring is the light weighted software which is directly depends on jdk
+ ->Spring helps is build loosely coupled application
+ ->It Requires less configuration and allows easy integration with any database
+ ->It reduces boiler plate codes
+ ->It supports IOC where objects are control by the program not by the programmer
+ ->It supports dependency injections
+ ->It provides default security 
+
+
+IOC(Inversion Of Control)
+ ->Ioc acts like a container in which the control of object creation is given to the program rather than the programmer with the help of 
+   configuration file
+ ->Ioc helps in creating object implicitly by reading configuration file and instantiate the pojo class
+
+
+Types Ioc Context or Containers
+1)Core Container
+  ->We can create core container by using Interface BeanFactory  and XMLBeanFactory implementation class 
+  ->We can build only standalone application
+
+2)J2EE Container
+  ->We can create this container by using ApplicationContext Interface and its implementation class are
+            *ClassPathXmlApplicationContext
+            *AnnotationConfigApplicationContext
+  ->We can build enterprise level application
+
+
+3)Web Container
+  -> We can create web container by using WebApplicationContext  Interface And its Implementa
