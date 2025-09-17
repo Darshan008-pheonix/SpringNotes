@@ -30,4 +30,11 @@ Types Ioc Context or Containers
 
 
 3)Web Container
-  -> We can create web container by using WebApplicationContext  Interface And its Implementa
+  -> We can create web container by using WebApplicationContext  Interface And its Implementation class is WebApplicationContextUtil
+
+Config.xml
+ 
+Configuration file consists of a parent tag <beans></beans> and child tag is <bean></bean>
+In order to configure a pojo class we make use of <bean> tag
+<bean> takes two attributes id and class
+In id we specify bean id for class we specify fully qualified class name.
