@@ -44,3 +44,8 @@ Dependency Injection
 Dependency Injection (DI) is a design pattern in which objects receive their dependencies from an external source rather than creating them manually by user.
 It promotes loose coupling, easier testing, and better code maintainability. In Spring, DI is achieved mainly through Constructor Injection or Setter Injection.
 
+
+xml data -> https://codeshare.io/5Qgj1e
+
+
+
