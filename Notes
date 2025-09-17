@@ -38,3 +38,9 @@ Configuration file consists of a parent tag <beans></beans> and child tag is <be
 In order to configure a pojo class we make use of <bean> tag
 <bean> takes two attributes id and class
 In id we specify bean id for class we specify fully qualified class name.
+
+Dependency Injection
+
+Dependency Injection (DI) is a design pattern in which objects receive their dependencies from an external source rather than creating them manually by user.
+It promotes loose coupling, easier testing, and better code maintainability. In Spring, DI is achieved mainly through Constructor Injection or Setter Injection.
+
