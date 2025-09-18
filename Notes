@@ -47,5 +47,56 @@ It promotes loose coupling, easier testing, and better code maintainability. In 
 
 xml data -> https://codeshare.io/5Qgj1e
 
+<property>
+    -> this tag will be used inside <bean> tag
+    -> this use to set the value for the bean attributes/properties
+    -> this tag contains 2 attributes name and value
+    name- we need specify the attribute name(var name)
+    value- this used specify value(should be encoded in " ")
+
+ex:
+<bean id="std" class="com.Student">
+ <property name="age" value="28">  </property>
+</bean>
+
+class Student{
+   
+    int age;
+    
+    void setAge(int age){
+       this.age=age;
+    }
+}
+
+Note:For using property tag setter method for the attribute is must.
+it follow proper naming convention
+
+
+<constructor-arg>
+    -> this tag is used inside bean tag when class is having
+       parameterized constructor
+    ->this tag has a attribute called value
+    ->This tag should be used only if there is not at all default 
+      construtor otherwise its not compulsory its depends business
+      logic.
+
+Ex-
+  <bean>
+   <constructor-arg value="virat"></constructor-arg>
+   <constructor-arg value="28"></constructor-arg>
+  </bean>
+    
+class student{
+   
+   String name;
+   int age;
+
+   Student(String name,int age){
+   this.name=name;
+   this.age=age;
+  }
+}
+
+
 
 
