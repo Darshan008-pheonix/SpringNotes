@@ -97,6 +97,24 @@ class student{
   }
 }
 
+Annotation Based Spring Configuration
+
+@Component:-
+
+* Rather than creating bean tag for every pojo class in .xml configuration file 
+  we make use @Component annotation.
+* This is the class level annotation used on top of pojo class.
+* It is used to make a class as qualified bean for the IOC.
+
+Procedure to achieve annotation based bean creation and access it using .xml
+and Application Context
+->Create a pojo and annotate as @Component
+->Go to .xml file and use <context:component-scan base-package="Package Path"/ > inside <Beans> tag
+   Ex:<context:component-scan base-package="com.jspiders"/>
+   Note:Make sure <beans> should contain xmlns:context attribute and value
+  xml code ->  https://codeshare.io/5QkgDw
+->In getBean() please do mention ClassName.class to access the object
+
 
 
 
