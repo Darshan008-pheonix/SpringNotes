@@ -116,5 +116,37 @@ and Application Context
 ->In getBean() please do mention ClassName.class to access the object
 
 
+@Scope ->Class based annotation
+       ->It is used the scope of the class from singleton to prototype etc
+      @Scope(value="prototype")
+
+
+@Value ->It used to perform field injection .It is used inject the values.
+         It can been used top of the attributes,Parameters,Setter Method
+
+@Autowired :- It is used achieve automatic dependency injection.
+              It will look into the context or container and finds the 
+              matching bean and injects inside the field/attribute.
+              It can be used with field/attribute ,constructor and setter.
+
+@Primary :- It is class based annotation which describe the bean is having
+            higher priority while autowiring .It will bean as default object 
+            while autowiring.
+
+@Qualifier :- It is used over come confusion /ambiguity issue when single 
+              reference var has multiple objects at the time of autowiring.
+              Using @qualifier we can specify the bean which can be autowired.
+              @Qualifier can be used attribute/field level also and it 
+              can used as class level annotation also.
+             @Qualifier should be used along the side of @Autowired
+            ex:-@Qualifier("QualifierName/ClassName(CamelCasing))
+Note:-Qualifier name can be given for the bean with help @Component or @Qualifier
+	
+     @Component("QualifierName") 
+     #@Qualifier("QualifierName")   
+     class Demo{
+
+     }
+
 
 
