@@ -1,6 +1,4 @@
 Spring
-
-
 Properties:
  ->Spring is the light weighted software which is directly depends on jdk
  ->Spring helps is build loosely coupled application
@@ -145,8 +143,23 @@ Note:-Qualifier name can be given for the bean with help @Component or @Qualifie
      @Component("QualifierName") 
      #@Qualifier("QualifierName")   
      class Demo{
-
      }
 
+@Configuration: This annotation marks a class as a source of
+bean definitions(creation).This can be used as a alternative
+of .xml file.
+Any class which is annotated as @Configuration will be treated
+as configuration class it is equivalent to the .xml file
+
+We can also use @Bean annotation inside configuration to create
+bean.
+
+@ComponentScan:-
+    This annotation is used along with @Configuration annotation
+to search ,scan and create the bean.
+Without @Component scan Spring or @Configuration cant search
+and create bean automatically
+ Syntax:-
+      @ComponentScan(BasePackage="path")
 
 
