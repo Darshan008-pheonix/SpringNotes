@@ -164,7 +164,11 @@ and create bean automatically
 
 
 MVC(Module View Controller):
-   It is design pattern which is used to develop the loosely coupled application.
+   It is design pattern which is used to develop the loosely coupled application
+   Model → represents the data & business logic
+   View → represents the UI (presentation layer)
+   Controller → acts as the request handler / coordinator
+
 
 Spring MVC:
    It is spring framework which is used develop web application and distributed application.
