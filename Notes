@@ -163,3 +163,59 @@ and create bean automatically
       @ComponentScan(BasePackage="path")
 
 
+MVC(Module View Controller):
+   It is design pattern which is used to develop the loosely coupled application.
+
+Spring MVC:
+   It is spring framework which is used develop web application and distributed application.
+Spring MVC is a request-driven web framework in the Spring ecosystem that implements the Model–View–Controller pattern on top of the Servlet API.
+
+Spring Components :
+->Front Controller(Dispatcher Servlet)
+->Handler Mapper
+->Controller
+->ModelAndView
+->ViewResolver
+->View 
+
+Front-Controller:-
+   It is responsible for performing pre and post processing of incoming request
+   Pre-processing :- Capturing the data from the request(ex:-form)
+   Post-processing :-Sending response back to client in client understandable form.
+  
+   ->Spring web mvc application we will use dispatcherservlet as a front controller.
+   DispatcherServlet(Spring framework servlet):-Predefine servlet class by spring
+
+
+Handler Mapper:-
+     It is predefine class in spring mvc.It is used to identify the request handler(Controller).The program which is handling the incoming request is called as request
+handler.
+handler Mapper will identify request handler and returns the details to dispatcher servlet
+
+Controller:-
+   It is a program which is used to handle the request.In Spring mvc user can create his own 
+controller.In spring MNC some predefined controller classes are available like below
+   ->SimpleFormController
+   ->AbstractCommandController
+   ->MultiActionController etc....
+We can create userdefine controller by using @Controller annotation
+Controller will return response the MAV or Understandable format 
+
+ModelAndView:
+  It is a predefine class in spring mvc.Where Model represent the data and view represent the logical view name.
+
+ViewResolver:
+   In spring mvc is multiple view resolver classes+
+      ->InternalViewResourceViewResolver
+      ->URLBasedViewResolver
+      ->XmlViewResolver ...etc
+  ->These view resolver are responsible to identify the views and send details(extension and 
+    location)
+
+View:
+  It is used to render model data to view and returns it
+
+
+ 
+
+
