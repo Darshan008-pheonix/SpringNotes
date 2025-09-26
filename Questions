@@ -1,0 +1,19 @@
+What is server?
+What is servlet?
+Explain the ways of creating servlet?
+Explain servlet life cycle?
+What is deployment descriptor?
+What is requestDispatcher ,forward() and include()
+What is spring?
+What is ioc?
+Explain difference types of injections?
+What is dependency Injection?
+What is .xml file?
+Explain the working of ioc
+What is autowiring 
+what is pojo
+Explain injections using .xml with tags and example
+Explain different types of containers 
+What are implementation classes of bean factory
+What is @component,@Bean,@value,@Configuration,@componentScan,@Autowired,@Primary,@Qualifier
+Explain Spring Mvc Working 
