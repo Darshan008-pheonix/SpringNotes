@@ -8,12 +8,10 @@ Properties:
  ->It supports dependency injections
  ->It provides default security 
 
-
 IOC(Inversion Of Control)
  ->Ioc acts like a container in which the control of object creation is given to the program rather than the programmer with the help of 
    configuration file
  ->Ioc helps in creating object implicitly by reading configuration file and instantiate the pojo class
-
 
 Types Ioc Context or Containers
 1)Core Container
@@ -25,7 +23,6 @@ Types Ioc Context or Containers
             *ClassPathXmlApplicationContext
             *AnnotationConfigApplicationContext
   ->We can build enterprise level application
-
 
 3)Web Container
   -> We can create web container by using WebApplicationContext  Interface And its Implementation class is WebApplicationContextUtil
@@ -41,7 +38,6 @@ Dependency Injection
 
 Dependency Injection (DI) is a design pattern in which objects receive their dependencies from an external source rather than creating them manually by user.
 It promotes loose coupling, easier testing, and better code maintainability. In Spring, DI is achieved mainly through Constructor Injection or Setter Injection.
-
 
 xml data -> https://codeshare.io/5Qgj1e
 
@@ -68,7 +64,6 @@ class Student{
 
 Note:For using property tag setter method for the attribute is must.
 it follow proper naming convention
-
 
 <constructor-arg>
     -> this tag is used inside bean tag when class is having
@@ -113,11 +108,9 @@ and Application Context
   xml code ->  https://codeshare.io/5QkgDw
 ->In getBean() please do mention ClassName.class to access the object
 
-
 @Scope ->Class based annotation
        ->It is used the scope of the class from singleton to prototype etc
       @Scope(value="prototype")
-
 
 @Value ->It used to perform field injection .It is used inject the values.
          It can been used top of the attributes,Parameters,Setter Method
@@ -150,9 +143,7 @@ bean definitions(creation).This can be used as a alternative
 of .xml file.
 Any class which is annotated as @Configuration will be treated
 as configuration class it is equivalent to the .xml file
-
-We can also use @Bean annotation inside configuration to create
-bean.
+We can also use @Bean annotation inside configuration to create bean.
 
 @ComponentScan:-
     This annotation is used along with @Configuration annotation
@@ -162,13 +153,11 @@ and create bean automatically
  Syntax:-
       @ComponentScan(BasePackage="path")
 
-
 MVC(Module View Controller):
    It is design pattern which is used to develop the loosely coupled application
    Model → represents the data & business logic
    View → represents the UI (presentation layer)
    Controller → acts as the request handler / coordinator
-
 
 Spring MVC:
    It is spring framework which is used develop web application and distributed application.
@@ -189,7 +178,6 @@ Front-Controller:-
   
    ->Spring web mvc application we will use dispatcherservlet as a front controller.
    DispatcherServlet(Spring framework servlet):-Predefine servlet class by spring
-
 
 Handler Mapper:-
      It is predefine class in spring mvc.It is used to identify the request handler(Controller).The program which is handling the incoming request is called as request
