@@ -220,6 +220,53 @@ View:
   It is used to render model data to view and returns it
 
 
+
+Steps To Creat SpringMvc Project
+->Create Maven project with maven-archetype webapp type
+->Create configuration class
+->create webintializer class with extends AbstractAnnotationConfigDispatcherServletIntilaizer  and override the methods .
+->Use webapp for creating jsp pages
+
+Model
+An interface used to pass attributes (data) from the controller to
+the view.
+It acts as a container for the data to be rendered in the view 
+(like JSP).
+You typically use methods like addAttribute(String key, Object value)
+to store data.
+
+ModelMap
+A map-based implementation of the Model interface.
+It is very similar to Model but gives you direct access 
+to the map-like structure(LinkedHashMap).
+Useful if you want to add multiple attributes in a more flexible way.
+
+
+ModelAndView
+A holder for both the model and the view.
+You can set both the view name and add data to the model
+in a single object.
+Useful when you want to return both the view and model explicitly.
+
+@Controller:- Its Specialized form of @Component which will mark a 
+class as webcontroller .That means this class will work as request
+handler  of http request and returs the responses .
+
+@RequestParam:- Its is used in SpringMvc which is used extract
+ the data from url parameters,form data or request parameters and 
+bind them with method arguements.
+Note : Parameters and arguements names should be same
+
+http://localhost:8080/SpringMvcProject/greet?name="Ankur"&&value="Priyanka"       
+
+
+
+
+
+
+
+
+
  
 
 
