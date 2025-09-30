@@ -260,6 +260,55 @@ Note : Parameters and arguements names should be same
 http://localhost:8080/SpringMvcProject/greet?name="Ankur"&&value="Priyanka"       
 
 
+Monolithic Application
+
+Definition:
+A monolithic application is a single-tiered software application in which all the functionalities (UI, business logic, and database access) are packaged and deployed as one unit.
+
+Advantages:
+
+Simple to develop (suitable for beginners or small apps).
+Easy to test and debug (everything in one place).
+Simple deployment (only one package).
+Shared database makes data handling straightforward.
+
+Disadvantages:
+
+Hard to scale (must scale the whole app, not parts).
+Slower development for large projects (tight coupling).
+Any small change requires redeployment of the entire application.
+Failure in one module can bring down the whole system.
+
+Micro Service Application:-
+
+Micro Service is an architecture that allows the developers to develop and deploy services independently. Each service running has its own process and this achieves the lightweight model to support business applications.
+Advantages
+Micro services offers the following advantages to its developers:
+   Easy deployment
+   Simple scalability
+   Compatible with Containers
+   Minimum configuration
+   Lesser production time 
+
+What is Spring Boot?
+Spring Boot provides a good platform for Java developers to develop a stand-alone and production-grade spring application that you can just run. You can get started with minimum configurations without the need for an entire Spring configuration setup.
+Advantages
+Spring Boot offers the following advantages to its developers:
+   Easy to understand and develop spring applications
+   Increases productivity
+   Reduces the development time
+
+Why Spring Boot?
+You can choose Spring Boot because of the features and benefits it offers as given here:
+ It provides a flexible way to configure Java Beans, XML configurations, and Database Transactions.
+ It provides a powerful batch processing and manages REST endpoints.
+ In Spring Boot, everything is auto configured; no manual configurations are                 needed. 
+ It offers annotation-based spring application
+ Eases dependency management
+ It includes Embedded Servlet Container
+
+
+
 
 
 
