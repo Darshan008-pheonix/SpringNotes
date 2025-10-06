@@ -309,10 +309,71 @@ Spring Boot Starter Actuator dependency is used to monitor and manage your appli
  <artifactId>spring-boot-starter-actuator</artifactId>
 </dependency>
 
+SpringBoot Architecture:-
+
+1.Controller Layer:
+Handles incoming HTTP requests and sends responses. Acts as the entry point of the application.
+It must not contain any business logic — only request handling and response mapping.
+Commonly used annotations:
+@Controller, @RestController, @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @PathVariable, @RequestParam, @RequestBody, @Valid                     
+
+2. DTO (Data Transfer Object):
+Used to transfer data between layers (mainly between Controller and Service).
+It helps hide internal entity structure and keeps the application secure and decoupled.
+DTOs often carry validated request and response data.
+Commonly used annotations:
+@Data, @Getter, @Setter, @NoArgsConstructor, @AllArgsConstructor (from Lombok), @NotNull, @Email, @Size (for validation)
+
+3. Service Layer (Interface):
+Defines the business operations that the application supports.
+Contains abstract methods for all major use cases.
+This layer focuses on what actions to perform, not how to perform them.
+Commonly used annotations:
+No special annotations (usually defined as an interface).
+
+4. Service Implementation Layer:
+Implements the actual business logic declared in the Service interface.
+Calls Repository/DAO to interact with the database.
+This layer ensures that the Controller remains free of logic and Repository remains focused on persistence.
+Commonly used annotations:
+@Service, @Transactional, @Autowired
+
+5. DAO (Data Access Object) Layer:
+Defines the data persistence operations like save, update, delete, and fetch.
+In traditional architecture, DAO interacts directly with JDBC or ORM frameworks like Hibernate.
+In modern Spring Boot (with JPA), DAO is often replaced by Repository Layer.
+Commonly used annotations:
+@Repository
 
 
+6. Exception Layer:
+Handles all application-level exceptions in a centralized manner.
+Prevents the app from crashing and returns meaningful error responses to the client.
+Typically implemented using Global Exception Handling.
+Commonly used annotations:
+@ControllerAdvice, @RestControllerAdvice, @ExceptionHandler, @ResponseStatus
+
+7. Repository Layer:
+Responsible for interacting with the database using JPA, Hibernate, or MongoDB.
+Contains predefined CRUD methods like save(), findById(), findAll(), deleteById() etc.
+This layer is directly connected to Entity classes and Database.
+Commonly used annotations:
+@Repository, @Query, @Modifying
+(Uses Spring Data interfaces like JpaRepository, CrudRepository, or MongoRepository)
 
 
+8.Entity Layer (if used):
+Represents database tables in the form of Java classes.
+Each entity maps to a specific table with fields corresponding to columns.
+Used by Repository layer to perform persistence operations.
+Commonly used annotations:
+@Entity, @Table, @Id, @GeneratedValue, @Column, @ManyToOne, @OneToMany, @JoinColumn
+
+9.Configuration Layer (optional but common):
+Contains application-level configurations like database, security, CORS, or messaging.
+Helps manage Bean configurations and custom setups.
+Commonly used annotations:
+@Configuration, @Bean, @EnableWebSecurity, @EnableScheduling, @PropertySource
 
 
 
