@@ -345,7 +345,6 @@ In modern Spring Boot (with JPA), DAO is often replaced by Repository Layer.
 Commonly used annotations:
 @Repository
 
-
 6. Exception Layer:
 Handles all application-level exceptions in a centralized manner.
 Prevents the app from crashing and returns meaningful error responses to the client.
