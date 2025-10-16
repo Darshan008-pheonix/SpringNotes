@@ -361,7 +361,6 @@ Commonly used annotations:
 @Repository, @Query, @Modifying
 (Uses Spring Data interfaces like JpaRepository, CrudRepository, or MongoRepository)
 
-
 8.Entity Layer (if used):
 Represents database tables in the form of Java classes.
 Each entity maps to a specific table with fields corresponding to columns.
@@ -378,7 +377,6 @@ Commonly used annotations:
 Important Annotations And Definations 
 
 @SpringBootApplication
-
 Combines @Configuration, @EnableAutoConfiguration, and @ComponentScan.
 It is the main entry point of any Spring Boot application.
 Automatically sets up the Spring context, scans components, and configures beans.
