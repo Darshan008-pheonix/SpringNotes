@@ -375,6 +375,166 @@ Helps manage Bean configurations and custom setups.
 Commonly used annotations:
 @Configuration, @Bean, @EnableWebSecurity, @EnableScheduling, @PropertySource
 
+Important Annotations And Definations 
+
+@SpringBootApplication
+
+Combines @Configuration, @EnableAutoConfiguration, and @ComponentScan.
+It is the main entry point of any Spring Boot application.
+Automatically sets up the Spring context, scans components, and configures beans.
+
+Component Scanning and Stereotypes
+
+@Component
+Generic stereotype for any Spring-managed component (used when @Service, @Repository, or @Controller are not semantically appropriate).
+
+@ComponentScan
+Specifies base packages to scan for Spring components (@Component, @Service, @Controller, etc.).
+Often used in configuration classes to control scanning scope.
+
+Spring MVC (Web) Annotations
+
+@Controller
+This annotation marks a Java class as a Spring MVC controller. It is used to handle HTTP requests and return views (e.g., HTML pages). Typically used in applications with a frontend rendered by the server (e.g., Thymeleaf).
+
+@RestController
+A specialized version of @Controller that automatically serializes return objects to JSON or XML and includes @ResponseBody by default. It's used in RESTful web services.
+
+@RequestMapping
+Used to map web requests to specific handler methods in controller classes. It can be used at both the class level and method level. It supports all HTTP methods (GET, POST, PUT, DELETE) through its method attribute.
+
+@GetMapping
+A shorthand for @RequestMapping(method = RequestMethod.GET). It’s used to handle HTTP GET requests. Typically used for reading or retrieving data.
+
+@PostMapping
+A shorthand for @RequestMapping(method = RequestMethod.POST). Used to handle HTTP POST requests, often for creating new resources.
+
+@PutMapping
+A shortcut for handling HTTP PUT requests, which are generally used to update existing resources.
+
+@DeleteMapping
+Used to handle HTTP DELETE requests, typically used for deleting resources from the backend.
+
+@PathVariable
+Binds a variable from the URI path to a method parameter. For example, if your URL is /users/5, you can bind the 5 to a method parameter with @PathVariable("id") Long id.
+
+@RequestParam
+Used to extract query parameters from the URL. For example, /users?page=2&limit=5 can be mapped to method parameters using @RequestParam int page, @RequestParam int limit.
+
+@RequestBody
+Binds the body of a request (e.g., JSON or XML) to a method parameter. Often used in POST and PUT methods when the request body contains a full representation of a resource.
+
+@Valid
+Triggers validation on a method parameter, usually an object annotated with constraints like @NotNull, @Size, etc. This ensures incoming request data is valid.
+
+Lombok Annotations
+
+@Data
+Generates boilerplate code such as getters, setters, toString(), equals(), hashCode(), and a constructor for final fields. It's a convenient shorthand for simple data carrier classes.
+
+@Getter
+Generates getter methods for all fields (if used on a class) or for a specific field (if used on a field).
+
+@Setter
+Generates setter methods, just like @Getter, but for setting field values.
+
+@NoArgsConstructor
+Generates a no-argument constructor. Useful especially when frameworks (like JPA) require a default constructor.
+
+@AllArgsConstructor
+Generates a constructor with one parameter for each field in the class.
+
+@Builder
+Implements the builder pattern to simplify the creation of objects with multiple parameters. It allows you to create objects like User.builder().name("John").age(25).build().
+
+Validation Annotations (JSR-380 / Jakarta Bean Validation)
+
+@NotNull
+Ensures that the field is not null. Commonly used in DTOs (Data Transfer Objects) for request validation.
+
+@Email
+Ensures that the value is a valid email address format.
+
+@Size
+Validates the size of a collection, string, or array. For example, @Size(min=3, max=10) ensures a field has a length between 3 and 10.
+
+Spring Service Layer and Dependency Injection
+
+@Service
+Marks a class as a service provider. It is used in the service layer of the application and is a specialization of @Component, allowing Spring to auto-detect it for dependency injection.
+
+@Repository
+Marks a class as a Data Access Object (DAO). It’s used to encapsulate database interaction logic. It also enables exception translation, converting database exceptions into Spring’s DataAccessException.
+
+@Autowired
+Tells Spring to automatically inject the dependency for a field, constructor, or method. It simplifies wiring beans into one another.
+
+@Transactional
+Used to indicate that a method or class should be executed within a transaction. This means all operations within the scope will either succeed together or fail together (rollback on error).
+
+Spring Exception Handling
+
+@ControllerAdvice
+Defines a global exception handler for controllers annotated with @Controller. You can centralize exception handling logic here instead of writing it in each controller.
+
+@RestControllerAdvice
+Same as @ControllerAdvice, but specific to @RestController. It automatically applies @ResponseBody so that exceptions return JSON or XML responses.
+
+@ExceptionHandler
+Used inside @ControllerAdvice or controllers to specify a method that handles a specific exception type.
+
+@ResponseStatus
+Allows you to define the HTTP status code returned by a controller method or exception handler method. For example, @ResponseStatus(HttpStatus.NOT_FOUND).
+
+Spring Data JPA (Persistence Layer)
+
+@Entity
+Marks a class as a JPA entity, meaning it maps to a database table. Must be used with @Id to define the primary key.
+
+@Table
+Optional annotation used to specify the name of the table that this entity maps to. If not used, the table name is usually inferred from the class name.
+
+@Id
+Defines the primary key of the entity. Required for any class annotated with @Entity.
+
+@GeneratedValue
+Specifies how the primary key is generated (e.g., AUTO, IDENTITY, SEQUENCE). Works with @Id.
+
+@Column
+Used to map a field to a specific column in the database. You can customize the column name, length, nullability, etc.
+
+@ManyToOne
+Defines a many-to-one relationship between two entities. For example, many orders can belong to one customer.
+
+@OneToMany
+Defines a one-to-many relationship. For example, one customer may have many orders. Typically used with mappedBy to avoid circular dependency.
+
+@JoinColumn
+Specifies the foreign key column for an entity relationship. Used with @ManyToOne or @OneToOne to map the join column in the database.
+
+@Query
+Used to define custom queries in Spring Data JPA repositories. You can write JPQL or native SQL queries here.
+
+@Modifying
+Used with @Query to indicate that the query performs a write operation (e.g., UPDATE, DELETE). It is required when executing non-select operations.
+
+Spring Configuration & Bean Management
+
+@Configuration
+Marks a class as a source of Spring bean definitions. It’s often used instead of XML for Java-based configuration.
+
+@Bean
+Indicates that a method returns a Spring-managed bean. Used inside a class annotated with @Configuration.
+
+@EnableWebSecurity
+Enables Spring Security’s web security features. You use this in a configuration class to define custom security rules.
+
+@EnableScheduling
+Enables Spring’s task scheduling support, allowing methods annotated with @Scheduled to run periodically or at fixed intervals.
+
+@PropertySource
+Specifies the location of a properties file to be loaded into the Spring Environment. For example, it can be used to load application-specific configurations.
+
 
 
 
