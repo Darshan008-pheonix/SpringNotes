@@ -1,0 +1,24 @@
+SOLID PRINCIPLES 
+->Single Responsibility->A class should have only one reason to change — meaning it should do only one job.
+->Open for extension and closed for modification
+->Liskov Principle -> If class B is subtype of class A then we should able to replace class A obj
+                      with class B without breaking its behaviour.
+->Interface Segmented Principle ->Clients should not be forced to depend on interfaces they do not use.
+->Dependency Inversion Principle ->IOC And Dependency Injection
+==============================================================================================================
+--------------------------------------------------------------------------------------------------------------
+==============================================================================================================
+Strategy Design Pattern:-
+The Strategy pattern is a behavioral design pattern that defines multiple algorithms, encapsulates their logic in dedicated classes, and enables changing an algorithm's behavior at runtime. It's particularly useful when you have multiple ways to perform a task
+and want to choose the approach dynamically.
+Popular Real-life Examples
+Courier Service → Shipping Cost Calculation - Discount for Premium members, Flat fee, Distance-based based
+and weight-based computations.
+Shopping Cart → Payment Options - CrediCard, PayPal, UPI, Cash, etc.
+Vehicle Manufacturing → Different cars(like SUVs, EVs, etc) require different drive modes.
+==============================================================================================================
+Observer Design Pattern:-
+
+
+
+
