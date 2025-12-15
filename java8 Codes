@@ -1,0 +1,18 @@
+===============================================
+  	/*
+					 * InterfaceName refvar=(par1,pr2)->{
+					 *   
+					 *   
+					 *   };
+					 */
+		Comparator<Employee> comparator1=(emp1,emp2)->{
+			return emp1.getAge()-emp2.getAge();
+		};
+		
+		List<Employee> el=EmployeeService.getEmployees();
+		Collections.sort(el, comparator1);
+		
+		for(Employee ele:el) {
+			System.out.println(ele);
+		}
+========================================================
