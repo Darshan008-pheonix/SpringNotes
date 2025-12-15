@@ -16,3 +16,56 @@
 			System.out.println(ele);
 		}
 ========================================================
+
+/*
+	 * Consumer -> accept(T) ->no return Type
+	 * BiCosumer ->accept(T,U) ->no return Type
+	 * 
+	 * Predicate ->Boolean Test(T) ->returns boolean
+	 * BiPredicate->Booelan Test(T,U) ->return boolean
+	 * 
+	 * Supplier ->T get()->returns T Type
+	 * 
+	 * Function  ->  R apply(T) ->returns R
+	 * BiFunction -> R apply(T,U) ->return R
+	 */
+	
+	
+	
+	public static void main(String[] args){
+					
+		Consumer<String> c1=(name)->{
+			System.out.println("Hi :"+name);
+		};
+		
+		BiConsumer<Integer,Integer>c2=(n1,n2)->{
+			System.out.println(n1+n2);
+		};
+		
+		Consumer<String> c3=(name)->{
+			System.out.println("Bye :"+name);
+		};
+		c1.accept("Rahul");
+		c2.accept(12,8);
+		
+		
+		Predicate<Integer> p1=(n)->n>100;
+		
+		BiPredicate<Integer,Integer> p2=(n1,n2)->n1>n2;
+		
+		System.out.println(p1.test(101));
+		System.out.println(p2.test(12, 3));
+		
+		
+		Supplier<Integer> s1=()->{ return 2;};
+		System.out.println(s1.get());
+		
+		
+		c1.andThen(c3).andThen(c3).accept("virat");
+		
+		Function<Integer,Integer> f1=(n)->n*n;
+		
+		BiFunction<Integer,Integer,Integer> f2=(n1,n2)->n1*n2;
+		
+		System.out.println(f1.apply(12));
+		System.out.println(f2.apply(3, 8));
