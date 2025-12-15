@@ -69,3 +69,26 @@
 		
 		System.out.println(f1.apply(12));
 		System.out.println(f2.apply(3, 8));
+
+===================================================================
+List<Integer> l1=Arrays.asList(12,3,4,5,7,11,89);
+		
+		List<Employee> el=EmployeeService.getEmployees();
+		
+		Predicate<Integer> p1=(age)->age>30;
+	
+//		l1.forEach(ele->{
+//			System.out.println(ele+11);
+//			System.out.println("hi");
+//		});
+		
+		
+		el.forEach(ele->
+		{
+			System.out.println(ele.getName()+"---"+ele.getAge()+"---"+ele.getSalary());
+			if(p1.test(ele.getAge())) {
+				ele.setSalary(ele.getSalary()+5000);
+			}
+			System.out.println(ele.getName()+"---"+ele.getAge()+"---"+ele.getSalary());
+			System.out.println("==================================================");
+		});
