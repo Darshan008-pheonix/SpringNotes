@@ -92,3 +92,70 @@ List<Integer> l1=Arrays.asList(12,3,4,5,7,11,89);
 			System.out.println(ele.getName()+"---"+ele.getAge()+"---"+ele.getSalary());
 			System.out.println("==================================================");
 		});
+/*
+	 * Terminal -> forEach ,sum,average,min,max,count
+	 * interediate ->filter,map,sorted 
+	 */
+	
+	public static void main(String[] args){
+		
+		//Arrays 
+		
+		int[] arr= {12,3,4,6,8,11};
+		
+//		Arrays.stream(arr).forEach(ele->System.out.print(ele+" "));
+//		
+//		System.out.println("========================");
+//		Arrays.stream(arr).forEach(ele->{
+//			if(ele%2==0) {
+//				System.out.println(ele);
+//			}
+//		});
+//		
+//		System.out.println("=====================================");
+//		Arrays.stream(arr).filter(ele->ele%2==0).forEach(ele->System.out.println(ele));
+//		
+//		Arrays.stream(arr).parallel().forEach(ele->System.out.println(Thread.currentThread().getName()+"-"+ele));
+//		System.out.println("============================================================");
+//		Arrays.stream(arr).forEach(ele->System.out.println(Thread.currentThread().getName()+"-"+ele));
+//		
+	// Sum,Avg,Max,Min.
+//		AtomicInteger sum=new AtomicInteger();
+//		Arrays.stream(arr).forEach(ele->{
+//			sum.addAndGet(ele);
+//		});
+//		System.out.println(sum);
+//		
+//		
+//		int ans=Arrays.stream(arr).sum();
+//		System.out.println(ans);
+//		
+//		double avg=Arrays.stream(arr).average().orElse(0.0);
+//		System.out.println(avg);
+//		int min=Arrays.stream(arr).min().orElse(0);
+//		int max=Arrays.stream(arr).max().orElse(0);
+//		
+		
+//	// Multiple each number by 7 then print only even ele
+//		
+//		Arrays.stream(arr).map(ele->ele*7).filter(ele->ele%2==0).forEach(ele->System.out.println(ele));
+//		
+//		
+//	//Count number odd elements in array 
+//		long count =Arrays.stream(arr).filter(ele->ele%2==1).count();
+//		System.out.println(count);
+//		
+	//Sort the array
+		//Arrays.stream(arr).sorted().forEach(ele->System.out.println(ele));
+	// Remove Duplicates
+	//	Arrays.stream(arr).distinct().forEach(ele->System.out.println(ele));
+	//limit(3) skip(3)
+		//skipping two records after sort
+		//Arrays.stream(arr).distinct().sorted().skip(2).forEach(ele->System.out.println(ele));
+	//second smallest
+		int small=Arrays.stream(arr).distinct().sorted().skip(1).findFirst().getAsInt();
+	//Thrid smallest
+		
+	//4,8,9,12,15 
+	//2nd largest
+		int small=Arrays.stream(arr).distinct().sorted().skip(arr.length-2).findFirst().getAsInt();
