@@ -159,3 +159,29 @@ List<Integer> l1=Arrays.asList(12,3,4,5,7,11,89);
 	//4,8,9,12,15 
 	//2nd largest
 		int small=Arrays.stream(arr).distinct().sorted().skip(arr.length-2).findFirst().getAsInt();
+
+
+
+		Integer[] arr= {10,20,30,2,5,11,8,17};
+		List ans=Arrays.stream(arr).collect(Collectors.toList());
+		System.out.println(ans);
+		
+		Map<Object, Object> m1 = Arrays.stream(arr).collect(Collectors.toMap((ele)->ele, ele->1));
+		
+		System.out.println(m1);
+		
+		
+//		Map<Object, Object> m2 = Arrays.stream(arr).collect(Collectors.toMap((ele)->ele,ele->1,(u,t)->u,()->new LinkedHashMap<Object, Object>()));
+//		
+//		System.out.println(m2);
+		
+		
+		//STring [] arr names
+		//  apple-5,ball-4
+		
+		 Map<Object, List<Integer>> m3 = Arrays.stream(arr).collect(Collectors.groupingBy(ele->ele%2==0 ,Collectors.toList()));
+		 
+		
+		System.out.println(m3);
+		
+		//Group by even length and odd length
