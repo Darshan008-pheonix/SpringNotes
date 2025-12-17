@@ -185,3 +185,140 @@ List<Integer> l1=Arrays.asList(12,3,4,5,7,11,89);
 		System.out.println(m3);
 		
 		//Group by even length and odd length
+
+
+
+public class Employee {
+
+    private int id;
+    private String name;
+    private Department department;
+    private double salary;
+    private int age;
+
+    private LocalDate joiningDate;   // <<==== ADDED
+
+    // List of skills
+    private List<String> skills;
+
+    // List of projects (nested entity)
+    private List<Project> projects;
+
+    // Map of certifications: (CertificationName -> Score)
+    private Map<String, Integer> certifications;
+
+    // Address details (key-value)
+    private Map<String, String> address;
+
+    public Employee(int id, String name, Department department,
+                    double salary, int age,
+                    LocalDate joiningDate,          // <<==== ADDED HERE
+                    List<String> skills,
+                    List<Project> projects,
+                    Map<String, Integer> certifications,
+                    Map<String, String> address) {
+
+        this.id = id;
+        this.name = name;
+        this.department = department;
+        this.salary = salary;
+        this.age = age;
+        this.joiningDate = joiningDate;      // <<==== ADDED
+        this.skills = skills;
+        this.projects = projects;
+        this.certifications = certifications;
+        this.address = address;
+    }
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Department getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public LocalDate getJoiningDate() {
+		return joiningDate;
+	}
+
+	public void setJoiningDate(LocalDate joiningDate) {
+		this.joiningDate = joiningDate;
+	}
+
+	public List<String> getSkills() {
+		return skills;
+	}
+
+	public void setSkills(List<String> skills) {
+		this.skills = skills;
+	}
+
+	public List<Project> getProjects() {
+		return projects;
+	}
+
+	public void setProjects(List<Project> projects) {
+		this.projects = projects;
+	}
+
+	public Map<String, Integer> getCertifications() {
+		return certifications;
+	}
+
+	public void setCertifications(Map<String, Integer> certifications) {
+		this.certifications = certifications;
+	}
+
+	public Map<String, String> getAddress() {
+		return address;
+	}
+
+	public void setAddress(Map<String, String> address) {
+		this.address = address;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", department=" + department + ", salary=" + salary + ", age="
+				+ age + ", joiningDate=" + joiningDate + ", skills=" + skills + ", projects=" + projects
+				+ ", certifications=" + certifications + ", address=" + address + "]";
+	}
+
+    // getters + setters + toString()
+    
+    
+}
+
