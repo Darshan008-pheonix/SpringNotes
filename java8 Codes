@@ -322,3 +322,23 @@ public class Employee {
     
 }
 
+
+  /*
+	   * ClassName.methodName(p1,p2)
+	   * Obj.methodName(p1,p2)
+	   * 
+	   * 
+	   * Method reference
+	   * ClassName::methodName
+	   *Obj::MethodName 
+	   */
+		
+	   List<Integer> l1=Arrays.asList(1,2,3,4,5);
+		//l1.forEach(ele->System.out.println(ele));
+	   l1.stream().forEach(Demo::display);
+	   
+	   //ClassName::new 
+	   
+	   l1.stream().forEach(Demo::new);
+		
+
